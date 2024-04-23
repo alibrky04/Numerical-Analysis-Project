@@ -3,27 +3,36 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 class question1:
-    def __init__(self, limit = 3):
+    def __init__(self):
         self.calculatedElements = [1, 1 - m.sqrt(3)]
-        self.limit = limit
     
-    def calculateUntil(self):
-        for i in range(2, self.limit):
+    def calculateUntil(self, limit = 3):
+        l = len(self.calculatedElements)
+
+        if limit <= 0:
+            print("Limit can't be a non-positive number!")
+        elif limit <= l:
+            print('Already reachead this index!\n')
+            return
+
+        for i in range(l, limit):
             newElement = 2 * (self.calculatedElements[i - 1] + self.calculatedElements[i - 2])
             self.calculatedElements.append(newElement)
 
     def showResult(self):
-        for i in range(self.limit):
-            print(f"Element {i + 1} : " + str(self.calculatedElements[i]))
+        l = len(self.calculatedElements)
 
-        plt.plot(np.arange(1, 101), self.calculatedElements)
+        for i in range(l):
+            print(f'x{i + 1} : ' + str(self.calculatedElements[i]))
+
+        plt.plot(np.arange(1, l + 1), self.calculatedElements)
         plt.yscale('log')
         plt.xlabel('Element')
-        plt.ylabel('Value')
+        plt.ylabel('Value (log scale)')
         plt.title('Elements while x_n = (1 - sqrt(3))^(n-1)')
 
-        custom_ticks = [1] + list(range(5, 101, 5))
-        custom_tick_labels = [f'n{i}' for i in custom_ticks]
+        custom_ticks = [1] + list(range(5, l + 1, 5))
+        custom_tick_labels = [f'x{i}' for i in custom_ticks]
         plt.xticks(custom_ticks, custom_tick_labels)
 
         plt.grid(True)

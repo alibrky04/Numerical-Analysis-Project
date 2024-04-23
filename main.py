@@ -1,11 +1,12 @@
 from questions.question1 import question1
-import matplotlib.pyplot as plt
-import numpy as np
+from questions.question2 import question2
 
 Q1LIMIT = 100
+Q2LIMIT = 15
 
-q1 = question1(Q1LIMIT)
+q1 = question1()
+q2 = question2()
 
-q1.calculateUntil()
+q2.calculateUntil(Q2LIMIT)
 
-q1.showResult()
+q2.showResults()
