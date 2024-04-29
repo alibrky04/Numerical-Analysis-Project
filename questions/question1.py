@@ -10,7 +10,7 @@ class question1:
         l = len(self.calculatedElements)
 
         if limit <= 0:
-            print("Limit can't be a non-positive number!")
+            print("Limit must be a positive number!")
         elif limit <= l:
             print('Already reachead this index!\n')
             return
