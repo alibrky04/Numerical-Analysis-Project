@@ -14,7 +14,7 @@ This repository contains Python code to solve three mathematical questions. The 
 - $f(x) = \sqrt{x^2 + 1} - 1$
 - $g(x) = x^2 / (\sqrt{x^2 + 1} + 1)$
 
-### [Question 2](questions/question3.py)
+### [Question 3](questions/question3.py)
 
 **Description:** Generates elements based on the recurrence relation: $x_{n+1} = \frac{13}{3}x_n - \frac{4}{3}x_{n-1}$, with initial elements $x_0 = 1$ and $x_1 = \frac{1}{3}$.
 
