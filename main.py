@@ -13,4 +13,7 @@ q3 = question3()
 q1.calculateUntil(Q1LIMIT)
 q2.calculateUntil(Q2LIMIT)
 q3.calculateUntil(Q3LIMIT)
+
+q1.showResults()
+q2.showResults()
 q3.showResults()

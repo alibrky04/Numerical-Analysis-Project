@@ -19,13 +19,13 @@ class question1:
             newElement = 2 * (self.calculatedElements[i - 1] + self.calculatedElements[i - 2])
             self.calculatedElements.append(newElement)
 
-    def showResult(self):
+    def showResults(self):
         l = len(self.calculatedElements)
 
         for i in range(l):
             print(f'x{i + 1} : ' + str(self.calculatedElements[i]))
 
-        plt.plot(np.arange(1, l + 1), self.calculatedElements)
+        plt.plot(np.arange(1, l + 1), self.calculatedElements, label='x_n = (1 - sqrt(3))^(n-1)')
         plt.yscale('log')
         plt.xlabel('Element')
         plt.ylabel('Value (log scale)')
@@ -35,5 +35,8 @@ class question1:
         custom_tick_labels = [f'x{i}' for i in custom_ticks]
         plt.xticks(custom_ticks, custom_tick_labels)
 
-        plt.grid(True)
+        plt.grid(linewidth=0.25)
+        
+        plt.legend()
+
         plt.show()
