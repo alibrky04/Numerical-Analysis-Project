@@ -12,7 +12,7 @@ This repository contains Python code to solve three mathematical questions. The 
 
 **Description:** Computes two functions ($f$ and $g$) for a given input base value. Functions are defined as follows:
 - $f(x) = \sqrt{x^2 + 1} - 1$
-- $g(x) = x^2 / (\sqrt{x^2 + 1} + 1)$
+- $g(x) = \frac{x^2}{\sqrt{x^2 + 1} + 1}$
 
 ### [Question 3](questions/question3.py)
 
