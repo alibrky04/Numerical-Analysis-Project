@@ -6,13 +6,13 @@ This repository contains Python code to solve three mathematical questions. The 
 
 ### [Question 1](questions/question1.py)
 
-**Description:** Calculates elements according to the recurrence relation: $x_n = 2 * (x_{n-1} + x_{n-2})$, where the initial elements are $x_0 = 1$ and $x_1 = 1 - \sqrt{3}$.
+**Description:** Calculates elements according to the recurrence relation: $x_n = 2(x_{n-1} + x_{n-2})$, where the initial elements are $x_0 = 1$ and $x_1 = 1 - \sqrt{3}$.
 
 ### [Question 2](questions/question2.py)
 
 **Description:** Computes two functions ($f$ and $g$) for a given input base value. Functions are defined as follows:
 - $f(x) = \sqrt{x^2 + 1} - 1$
-- $g(x) = \frac{x^2}{\sqrt{x^2 + 1} + 1}$
+- $g(x) = x^2/(\sqrt{x^2 + 1} + 1)$
 
 ### [Question 3](questions/question3.py)
 
