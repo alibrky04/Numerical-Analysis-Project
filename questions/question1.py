@@ -25,14 +25,16 @@ class question1:
         for i in range(l):
             print(f'x{i + 1} : ' + str(self.calculatedElements[i]))
 
-        plt.plot(np.arange(1, l + 1), self.calculatedElements, label='x_n = (1 - sqrt(3))^(n-1)')
-        plt.yscale('log')
-        plt.xlabel('Element')
-        plt.ylabel('Value (log scale)')
-        plt.title('Elements while x_n = (1 - sqrt(3))^(n-1)')
+        plt.figure(figsize=(6, 4), dpi=150)
 
-        custom_ticks = [1] + list(range(5, l + 1, 5))
-        custom_tick_labels = [f'x{i}' for i in custom_ticks]
+        plt.plot(np.arange(1, l + 1), self.calculatedElements, label='$x_n = (1 - \sqrt{3})^{n-1}$')
+        plt.yscale('log')
+        plt.xlabel('$x_n$')
+        plt.ylabel('Sequence Values')
+        plt.title('$x_n = (1 - \sqrt{3})^{n-1}$')
+
+        custom_ticks = [1] + list(range(10, l + 1, 10))
+        custom_tick_labels = [f'$x_{{{i}}}$' for i in custom_ticks]
         plt.xticks(custom_ticks, custom_tick_labels)
 
         plt.grid(linewidth=0.25)

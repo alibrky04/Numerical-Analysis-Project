@@ -25,14 +25,16 @@ class question3:
         for i in range(l):
             print(f'x{i} : ' + str(self.calculatedElements[i]))
 
-        plt.plot(np.arange(1, l + 1), self.calculatedElements, label='x_(n+1) = (13/3) * x_n - (4/3) * x_(n-1)')
+        plt.figure(figsize=(6, 4), dpi=150)
+
+        plt.plot(np.arange(1, l + 1), self.calculatedElements, label='$x_{n+1} = \\frac{13}{3}x_n - \\frac{4}{3}x_{n-1}$')
         plt.yscale('log')
-        plt.xlabel('Element')
-        plt.ylabel('Value (log scale)')
-        plt.title('Elements while x_(n+1) = (13/3) * x_n - (4/3) * x_(n-1)')
+        plt.xlabel('$x_n$')
+        plt.ylabel('Sequence Values')
+        plt.title('$x_{n+1} = \\frac{13}{3}x_n - \\frac{4}{3}x_{n-1}$')
 
         custom_ticks = [1] + list(range(5, l + 1, 5))
-        custom_tick_labels = [f'x{i}' for i in custom_ticks]
+        custom_tick_labels = [f'$x_{{{i}}}$' for i in custom_ticks]
         plt.xticks(custom_ticks, custom_tick_labels)
 
         plt.grid(linewidth=0.25)

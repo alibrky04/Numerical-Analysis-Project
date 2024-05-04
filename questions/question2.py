@@ -45,16 +45,16 @@ class question2:
         x_axis_g = x_axis_f + bar_width
 
         f.bar(x_axis_f, self.fResults, color='skyblue', width=bar_width, label='f')
-        f.set_title('f(x) = sqrt(x^2 + 1) - 1')
+        f.set_title('$f(x) = \sqrt{x^2 + 1} - 1$', fontsize=15)
         f.set_yscale('log')
-        f.set_xlabel('x')
-        f.set_ylabel('f(x)')
+        f.set_xlabel('$x$', fontsize=12)
+        f.set_ylabel('$f(x)$', fontsize=12)
 
         g.bar(x_axis_g, self.gResults, color='salmon', width=bar_width, label='g')
-        g.set_title('g(x) = x^2 / sqrt(x^2 + 1) + 1')
+        g.set_title('$g(x) = \\frac{x^2}{\sqrt{x^2 + 1} + 1}$', fontsize=15)
         g.set_yscale('log')
-        g.set_xlabel('x')
-        g.set_ylabel('g(x)')
+        g.set_xlabel('$x$', fontsize=12)
+        g.set_ylabel('$g(x)$', fontsize=12)
 
         plt.tight_layout()
 
