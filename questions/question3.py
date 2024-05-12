@@ -29,13 +29,12 @@ class question3:
 
         plt.plot(np.arange(1, l + 1), self.calculatedElements, label='$x_{n+1} = \\frac{13}{3}x_n - \\frac{4}{3}x_{n-1}$')
         plt.yscale('log')
-        plt.xlabel('$x_n$')
-        plt.ylabel('Sequence Values')
+        plt.xlabel('$n$')
+        plt.ylabel('$x_n$')
         plt.title('$x_{n+1} = \\frac{13}{3}x_n - \\frac{4}{3}x_{n-1}$')
 
         custom_ticks = [1] + list(range(5, l + 1, 5))
-        custom_tick_labels = [f'$x_{{{i}}}$' for i in custom_ticks]
-        plt.xticks(custom_ticks, custom_tick_labels)
+        plt.xticks(custom_ticks)
 
         plt.grid(linewidth=0.25)
 
