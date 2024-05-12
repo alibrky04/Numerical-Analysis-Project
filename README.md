@@ -22,7 +22,7 @@ This repository contains Python code to solve three mathematical questions. The 
 
 To use the provided code:
 
-1. Import the question classes from the [questions](questions.py) module.
+1. Import the question classes from the [questions](questions) module.
 2. Set limits for each question using the constants `Q1LIMIT`, `Q2LIMIT`, and `Q3LIMIT`.
 3. Initialize instances of the question classes.
 4. Call the `calculateUntil()` method for each question with the desired limit.
