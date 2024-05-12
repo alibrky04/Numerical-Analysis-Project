@@ -41,20 +41,23 @@ class question2:
         fig, (f, g) = plt.subplots(1, 2, figsize=(12, 6))
 
         bar_width = 0.35
-        x_axis_f = np.arange(len(x_axis))
-        x_axis_g = x_axis_f + bar_width
+        x_axis = np.arange(len(x_axis))
 
-        f.bar(x_axis_f, self.fResults, color='skyblue', width=bar_width, label='f')
+        f.bar(x_axis, self.fResults, color='skyblue', width=bar_width, label='f')
         f.set_title('$f(x) = \sqrt{x^2 + 1} - 1$', fontsize=15)
         f.set_yscale('log')
         f.set_xlabel('$x$', fontsize=12)
         f.set_ylabel('$f(x)$', fontsize=12)
+        f.set_xticks(x_axis)
+        f.set_xticklabels([f'$8^{{-{i + 1}}}$' for i in range(l)])
 
-        g.bar(x_axis_g, self.gResults, color='salmon', width=bar_width, label='g')
+        g.bar(x_axis, self.gResults, color='salmon', width=bar_width, label='g')
         g.set_title('$g(x) = \\frac{x^2}{\sqrt{x^2 + 1} + 1}$', fontsize=15)
         g.set_yscale('log')
         g.set_xlabel('$x$', fontsize=12)
         g.set_ylabel('$g(x)$', fontsize=12)
+        g.set_xticks(x_axis)
+        g.set_xticklabels([f'$8^{{-{i + 1}}}$' for i in range(l)])
 
         plt.tight_layout()
 
